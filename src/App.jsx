@@ -3,6 +3,7 @@ import "./App.css";
 
 function App() {
   const [page, setPage] = useState("home");
+  const [darkMode, setDarkMode] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [previewUrl, setPreviewUrl] = useState("");
   const [message, setMessage] = useState("");
@@ -81,7 +82,7 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <div className={darkMode ? "app dark" : "app"}>
       <nav className="navbar">
         <div className="logo" onClick={() => setPage("home")}>
           <span className="logoIcon">♻</span>
@@ -109,10 +110,15 @@ function App() {
           >
             Waste Guide
           </button>
+
+          <button onClick={() => setDarkMode(!darkMode)}>
+            {darkMode ? "Light Mode" : "Dark Mode"}
+          </button>
         </div>
       </nav>
 
       {page === "home" && <HomePage setPage={setPage} />}
+
       {page === "analyze" && (
         <AnalyzePage
           selectedImage={selectedImage}
@@ -124,6 +130,7 @@ function App() {
           analyzeImage={analyzeImage}
         />
       )}
+
       {page === "guide" && <GuidePage setPage={setPage} />}
     </div>
   );
@@ -254,7 +261,11 @@ function AnalyzePage({
             </div>
           )}
 
-          <button className="primaryBtn fullWidth" onClick={analyzeImage} disabled={loading}>
+          <button
+            className="primaryBtn fullWidth"
+            onClick={analyzeImage}
+            disabled={loading}
+          >
             {loading ? "Analyzing..." : "Analyze Waste"}
           </button>
 
