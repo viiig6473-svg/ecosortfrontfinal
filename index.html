@@ -1,26 +1,17 @@
-<div className="navLinks">
-  <button
-    className={page === "home" ? "navActive" : ""}
-    onClick={() => setPage("home")}
-  >
-    Home
-  </button>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="EcoSort AI helps classify waste items and gives smart waste management guidance."
+    />
+    <title>EcoSort AI</title>
+  </head>
 
-  <button
-    className={page === "analyze" ? "navActive" : ""}
-    onClick={() => setPage("analyze")}
-  >
-    Analyze
-  </button>
-
-  <button
-    className={page === "guide" ? "navActive" : ""}
-    onClick={() => setPage("guide")}
-  >
-    Waste Guide
-  </button>
-
-  <button onClick={() => setDarkMode(!darkMode)}>
-    {darkMode ? "Light Mode" : "Dark Mode"}
-  </button>
-</div>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
