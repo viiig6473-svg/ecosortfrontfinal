@@ -20,6 +20,15 @@ button {
   min-height: 100vh;
 }
 
+.app.dark {
+  min-height: 100vh;
+  color: #e5e7eb;
+  background:
+    radial-gradient(circle at top left, rgba(34, 197, 94, 0.18), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.16), transparent 35%),
+    linear-gradient(135deg, #020617, #0f172a);
+}
+
 .navbar {
   width: min(1180px, calc(100% - 32px));
   margin: 18px auto 0;
@@ -406,6 +415,93 @@ h1 span {
   display: flex;
   justify-content: center;
   margin-top: 30px;
+}
+
+/* DARK MODE */
+
+.app.dark .navbar,
+.app.dark .heroText,
+.app.dark .infoPanel,
+.app.dark .uploadCard,
+.app.dark .heroCard,
+.app.dark .featureCard,
+.app.dark .guideCard {
+  background: rgba(15, 23, 42, 0.86);
+  border-color: rgba(148, 163, 184, 0.22);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.app.dark h1,
+.app.dark .heroCard h2,
+.app.dark .featureCard h3,
+.app.dark .guideCard h3,
+.app.dark .result h2,
+.app.dark .logo {
+  color: #dcfce7;
+}
+
+.app.dark h1 span {
+  color: #4ade80;
+}
+
+.app.dark .heroText p,
+.app.dark .infoPanel p,
+.app.dark .guideHeader p,
+.app.dark .featureCard p,
+.app.dark .guideCard p,
+.app.dark .result p,
+.app.dark .steps p {
+  color: #cbd5e1;
+}
+
+.app.dark .navLinks button {
+  color: #cbd5e1;
+}
+
+.app.dark .navLinks button:hover,
+.app.dark .navLinks .navActive {
+  background: rgba(34, 197, 94, 0.18);
+  color: #bbf7d0;
+}
+
+.app.dark .badge,
+.app.dark .logoIcon {
+  background: rgba(34, 197, 94, 0.16);
+  color: #bbf7d0;
+  border-color: rgba(134, 239, 172, 0.35);
+}
+
+.app.dark .steps div,
+.app.dark .tips li,
+.app.dark .uploadBox,
+.app.dark .result,
+.app.dark .guideIcon {
+  background: rgba(22, 101, 52, 0.18);
+  border-color: rgba(134, 239, 172, 0.25);
+  color: #dcfce7;
+}
+
+.app.dark .secondaryBtn {
+  background: rgba(15, 23, 42, 0.8);
+  color: #bbf7d0;
+  border-color: rgba(134, 239, 172, 0.35);
+}
+
+.app.dark .secondaryBtn:hover {
+  background: rgba(22, 101, 52, 0.22);
+}
+
+.app.dark .preview,
+.app.dark .emptyPreview {
+  background: #020617;
+  border-color: rgba(148, 163, 184, 0.35);
+  color: #cbd5e1;
+}
+
+.app.dark .error {
+  background: rgba(127, 29, 29, 0.35);
+  color: #fecaca;
+  border-color: rgba(248, 113, 113, 0.35);
 }
 
 @media (max-width: 850px) {
