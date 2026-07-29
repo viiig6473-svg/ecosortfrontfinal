@@ -1,13 +1,26 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ecosort-frontend</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+<div className="navLinks">
+  <button
+    className={page === "home" ? "navActive" : ""}
+    onClick={() => setPage("home")}
+  >
+    Home
+  </button>
+
+  <button
+    className={page === "analyze" ? "navActive" : ""}
+    onClick={() => setPage("analyze")}
+  >
+    Analyze
+  </button>
+
+  <button
+    className={page === "guide" ? "navActive" : ""}
+    onClick={() => setPage("guide")}
+  >
+    Waste Guide
+  </button>
+
+  <button onClick={() => setDarkMode(!darkMode)}>
+    {darkMode ? "Light Mode" : "Dark Mode"}
+  </button>
+</div>
